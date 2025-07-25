@@ -1,0 +1,13 @@
+package com.ai.codeexplainer;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class CodeexplainerApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
