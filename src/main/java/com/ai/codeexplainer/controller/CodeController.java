@@ -2,6 +2,7 @@ package com.ai.codeexplainer.controller;
 
 import com.ai.codeexplainer.service.OpenAiService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -20,6 +21,11 @@ public class CodeController {
     @PostMapping("/explain")
     public String explainCode(@RequestBody CodeRequest codeRequest) {
         return openAiService.explainCode(codeRequest.getCode());
+    }
+
+    @GetMapping("/ping")
+    public ResponseEntity<String> ping() {
+        return ResponseEntity.ok("pong");
     }
 
     public static class CodeRequest {

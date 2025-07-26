@@ -25,7 +25,7 @@ public class OpenAiService {
 
         Map<String, Object> message = new HashMap<>();
         message.put("role", "user");
-        message.put("content", "Explain this Java code:\n" + codeSnippet);
+        message.put("content", "Explain this code:\n" + codeSnippet);
 
         Map<String, Object> body = new HashMap<>();
         body.put("model", "gpt-3.5-turbo");
